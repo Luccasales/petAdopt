@@ -32,7 +32,6 @@ article{
         display: flex;
         height: 50vh;
         justify-content: space-evenly;
-        border: #F97415 solid;
 
         .infoPet{
             width: 35%;
@@ -58,23 +57,19 @@ article{
 .galeria{
     display: flex;
     justify-content: space-evenly;
+    
 }
 
 .pet{
-    width: 20%;
-    height: 25vh;
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    list-style: none;
+    padding-top: 2rem;
     align-items: center;
-
-    .descricao, .none{
-        display: none;
-    }
 }
 
 .imgPet{
     width: 50%;
     height: 20vh;
-    border: 100%;
+    border-radius: 50%;
+    cursor: pointer;
 }
