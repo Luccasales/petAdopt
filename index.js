@@ -5,11 +5,14 @@ const nomeDoPet = document.getElementById("nomeDoPet");
 const descPet = document.getElementById("descricao");
 const fotoGrande = document.getElementById("fotoGrande");
 
-//miniatura dos pet,para ver onde o usuario clicou,logo adiciono um eventListener
-const scooby = document.getElementById("Scooby");
-const pantera = document.getElementById("Pantera");
-const thor = document.getElementById("Thor");
-const garfield = document.getElementById("Garfield");
+//miniatura dos pet,para ver onde o usuario clicou,logo adiciono um eventListener,sem o for
+//const scooby = document.getElementById("Scooby");
+//const pantera = document.getElementById("Pantera");
+//const thor = document.getElementById("Thor");
+//const garfield = document.getElementById("Garfield");
+
+//Para o FOR
+const miniaturas = document.querySelectorAll(".imgPet")
 
 //Obejeto com Array para pegar o que vai ser colocado no HTML
 const pets = [
@@ -39,6 +42,20 @@ const pets = [
     }
 ];
 
+//Adiciona o evento de clique,que chama a função VerificarClique(Com o parametro),sem o for
+//scooby.addEventListener("click", () => verificarClique("Scooby"));
+//pantera.addEventListener("click", () => verificarClique("Pantera"));
+//thor.addEventListener("click", () => verificarClique("Thor"));
+//garfield.addEventListener("click", () => verificarClique("Garfield"));
+
+//tentando fazer com o for
+for (let i = 0 ; i < miniaturas.length; i++){
+    miniaturas[i].addEventListener("click", () => {
+        const id = miniaturas[i].id;
+        verificarClique(id)
+    })
+}
+
 //Pega o ID é o parametro do eventListener 
 const verificarClique = (id) => {
     if(id === "Scooby"){
@@ -66,8 +83,3 @@ const mostrarInfo = (pet) => {
 }
 
 
-//Adiciona o evento de clique,que chama a função VerificarClique(Com o parametro)
-scooby.addEventListener("click", () => verificarClique("Scooby"));
-pantera.addEventListener("click", () => verificarClique("Pantera"));
-thor.addEventListener("click", () => verificarClique("Thor"));
-garfield.addEventListener("click", () => verificarClique("Garfield"));
