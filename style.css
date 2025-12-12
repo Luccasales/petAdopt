@@ -23,8 +23,8 @@ header .btnAdote {
   cursor: pointer;
 }
 
-.banenr {
-  height: 80vh;
+.banner {
+  height: 90vh;
 }
 
 article {
@@ -43,10 +43,13 @@ article .infoPet #nomeDoPet {
   font-size: 3.75rem;
 }
 article .infoPet #descricao {
-  font-size: 1.5;
+  font-size: 1.5rem;
 }
 article #fotoGrande {
   width: 40%;
+  border-radius: 20px;
+  height: 95%;
+  margin-top: 30px;
 }
 
 .galeria {
@@ -66,6 +69,11 @@ article #fotoGrande {
   height: 20vh;
   border-radius: 50%;
   cursor: pointer;
+  transition: 0.4s;
+}
+
+.imgPet:hover {
+  transform: scale(1.1);
 }
 
 .sessaoFormulario {
@@ -94,12 +102,13 @@ article #fotoGrande {
 .formulario {
   display: flex;
   flex-direction: column;
-  border: solid;
   width: 60%;
   height: 50%;
   justify-content: space-between;
+  align-items: center;
 }
 .formulario label {
+  width: 27.5vw;
   font-size: 2rem;
   font-weight: 700;
 }
@@ -112,12 +121,12 @@ article #fotoGrande {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 15vw;
-  border: solid;
+  width: 20vw;
 }
 .formulario .escolhaAnimal input {
-  height: 20px;
-  width: 20px;
+  height: 5vh;
+  width: 5vw;
+  cursor: pointer;
 }
 
 .btnAdotar {
@@ -127,8 +136,51 @@ article #fotoGrande {
   height: 5rem;
   border-radius: 10px;
   align-items: center;
-  border: solid;
   font-size: 2rem;
   text-align: center;
   margin: 20px 0px;
+  transition: 0.4s;
+}
+
+.btnAdotar:hover {
+  background-color: #1F2937;
+  color: #fff;
+}
+
+.rodape {
+  display: flex;
+  flex-direction: column;
+  background-color: #1F2937;
+  color: #9CA3AF;
+  height: 25vh;
+}
+
+.parteCima {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 70%;
+  justify-content: space-evenly;
+  border-top: #4B5563 4px solid;
+}
+.parteCima p {
+  font-size: 1.3rem;
+}
+
+.contatos {
+  width: 4vw;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.parteBaixo {
+  display: flex;
+  justify-content: center;
+  border-top: #4B5563 4px solid;
+  align-items: center;
+  text-align: center;
+}
+.parteBaixo p {
+  font-size: 1.3rem;
 }/*# sourceMappingURL=style.css.map */
